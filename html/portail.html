@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portail - EFREI</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <img class="logo" src="../img/Efrei-logo.svg" alt="Logo de l'EFREI - Paris Panthéon-Assas">
+            </a>
+            <nav>
+                <ul class="menu-principal">
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="./formation.html">Formations</a>
+                        <ul class="sous-menu">
+                            <li><a href="./formation.html#pge">Programme Grande École</a></li>
+                            <li><a href="./formation.html#bachelor">Bachelor</a></li>
+                            <li><a href="./formation.html#international">International</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="./equipe.html">Équipe</a>
+                        <ul class="sous-menu">
+                            <li><a href="./equipe.html#gouvernance">Gouvernance</a></li>
+                            <li><a href="./equipe.html#recherche">Recherche</a></li>
+                            <li><a href="./equipe.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./services.html">Services & Vie</a></li>
+                    <li><a href="./ressource.html">Ressources</a></li>
+                    <li><a href="./portail.html" class="active">Portail</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./apropos.html" class="btn btn-secondary"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-small section-padding"
+            style="background: linear-gradient(to right, #6610f2, #520dc2); padding-top: 120px;">
+            <div class="container">
+                <h1>Portail Numérique</h1>
+                <p>Votre point d'entrée vers les services EFREI</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <!-- Candidats -->
+                    <div class="card"
+                        style="background: var(--surface-color); padding: 2rem; border-radius: 12px; text-align: center;">
+                        <h3 class="mb-1" style="color: var(--accent-color);">Candidats</h3>
+                        <p class="mb-2">Préparez votre avenir dès maintenant.</p>
+                        <ul style="text-align: left; margin-bottom: 1.5rem; list-style: none;">
+                            <li class="mb-1">👉 <a href="#" style="text-decoration: underline;">Parcoursup</a></li>
+                            <li class="mb-1">👉 <a href="#" style="text-decoration: underline;">Concours Puissance
+                                    Alpha</a></li>
+                            <li>👉 <a href="#" style="text-decoration: underline;">Calculateur frais de scolarité</a>
+                            </li>
+                        </ul>
+                        <a href="./contact.html" class="btn btn-primary">Je candidate</a>
+                    </div>
+
+                    <!-- Étudiants -->
+                    <div class="card"
+                        style="background: var(--surface-color); padding: 2rem; border-radius: 12px; text-align: center;">
+                        <h3 class="mb-1" style="color: var(--accent-color);">Étudiants</h3>
+                        <p class="mb-2">Accédez à vos outils quotidiens.</p>
+                        <ul style="text-align: left; margin-bottom: 1.5rem; list-style: none;">
+                            <li class="mb-1">🔐 <a href="#" style="text-decoration: underline;">MyEfrei (Intranet)</a>
+                            </li>
+                            <li class="mb-1">📚 <a href="#" style="text-decoration: underline;">Moodle</a></li>
+                            <li>📅 <a href="#" style="text-decoration: underline;">Planning des cours</a></li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary">Connexion</a>
+                    </div>
+
+                    <!-- Entreprises -->
+                    <div class="card"
+                        style="background: var(--surface-color); padding: 2rem; border-radius: 12px; text-align: center;">
+                        <h3 class="mb-1" style="color: var(--accent-color);">Entreprises</h3>
+                        <p class="mb-2">Recrutez nos talents.</p>
+                        <ul style="text-align: left; margin-bottom: 1.5rem; list-style: none;">
+                            <li class="mb-1">💼 <a href="#" style="text-decoration: underline;">Déposer une offre</a>
+                            </li>
+                            <li class="mb-1">🤝 <a href="#" style="text-decoration: underline;">Devenir partenaire</a>
+                            </li>
+                            <li>💰 <a href="#" style="text-decoration: underline;">Taxe d'apprentissage</a></li>
+                        </ul>
+                        <a href="./contact.html" class="btn btn-secondary">Espace Pro</a>
+                    </div>
+
+                    <!-- Alumni -->
+                    <div class="card"
+                        style="background: var(--surface-color); padding: 2rem; border-radius: 12px; text-align: center;">
+                        <h3 class="mb-1" style="color: var(--accent-color);">Alumni</h3>
+                        <p class="mb-2">Restez connectés au réseau.</p>
+                        <ul style="text-align: left; margin-bottom: 1.5rem; list-style: none;">
+                            <li class="mb-1">📖 <a href="#" style="text-decoration: underline;">Annuaire des
+                                    diplômés</a></li>
+                            <li class="mb-1">🔄 <a href="#" style="text-decoration: underline;">Mettre à jour mon
+                                    profil</a></li>
+                            <li>🥂 <a href="#" style="text-decoration: underline;">Événements Alumni</a></li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary">Accès Membre</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>EFREI</h4>
+                    <p>30-32 Avenue de la République<br>94800 Villejuif</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Accès rapide</h4>
+                    <ul>
+                        <li><a href="./formation.html">Formations</a></li>
+                        <li><a href="./contact.html">Admissions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EFREI - Département Informatique. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

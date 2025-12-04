@@ -1,0 +1,372 @@
+:root {
+    /* Color Palette - Dark Theme Premium */
+    --bg-color: #0a0a0a;
+    --surface-color: rgba(26, 26, 26, 0.9); /* Ajout de transparence pour voir le fond */
+    --surface-hover: #252525;
+    --primary-color: #0056b3;
+    --primary-hover: #004494;
+    --accent-color: #00d4ff;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --border-color: #333333;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), #003366);
+    --gradient-surface: linear-gradient(145deg, var(--surface-color), #111);
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    
+    /* Image de fond globale ajoutée ici */
+    background: url('../img/img/campusEfrei.webp') no-repeat center center fixed;
+    background-size: cover;
+    background-color: var(--bg-color); /* Fallback */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; color: var(--accent-color); }
+h3 { font-size: 1.75rem; }
+
+p {
+    color: var(--text-secondary); /* Note: sur fond image, s'assurer que c'est lisible */
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Améliore lisibilité sur image */
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Header & Nav */
+header {
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--spacing-sm) 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.menu-principal {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.menu-principal a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.menu-principal a:hover,
+.menu-principal a.active {
+    color: var(--accent-color);
+}
+
+/* Dropdown */
+.dropdown { position: relative; }
+
+.sous-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--spacing-xs);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition-normal);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown:hover .sous-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.sous-menu li a {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 4px;
+}
+
+.sous-menu li a:hover {
+    background-color: var(--surface-hover);
+    color: var(--text-primary);
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: var(--primary-color);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-logo {
+    width: 100px;
+    margin-bottom: var(--spacing-md);
+    animation: pulse 2s infinite;
+    filter: brightness(0) invert(1);
+}
+
+.loader-bar {
+    width: 200px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.loader-progress {
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    animation: load 2s ease-in-out forwards;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes load {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition-normal);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 86, 179, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 86, 179, 0.6);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.btn-nav-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+/* --- Sections Styles --- */
+
+.section-padding {
+    padding: var(--spacing-xl) 0;
+}
+
+/* Hero Section */
+.hero-section {
+    /* Garde le gradient sombre sur l'image du hero spécifique si tu le souhaites, 
+       sinon retire cette ligne background pour voir l'image du body */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/campus-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* KPI Section */
+.section-surface {
+    background-color: var(--surface-color); /* Fond semi-transparent */
+    backdrop-filter: blur(5px); /* Effet flou sur l'image de fond */
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.kpi-card h3 {
+    font-size: 3rem;
+}
+
+.kpi-number { color: var(--primary-color); }
+.kpi-number-success { color: var(--success-color); }
+
+/* Trust Section */
+.trust-logos {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.trust-placeholder {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: var(--surface-color);
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-column h4 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-column2 {
+    margin-left: 250px;
+}
+
+.logo-Linkedin {
+    height:20px;
+    width: auto;
+}
+
+.footer-column ul li { margin-bottom: 0.5rem; }
+.footer-column ul li a { color: var(--text-secondary); }
+.footer-column ul li a:hover { color: var(--accent-color); }
+
+.footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}

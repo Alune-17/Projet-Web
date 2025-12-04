@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - EFREI</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <img class="logo" src="../img/Efrei-logo.svg" alt="Logo de l'EFREI - Paris Panthéon-Assas">
+            </a>
+            <nav>
+                <ul class="menu-principal">
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="./formation.html">Formations</a>
+                        <ul class="sous-menu">
+                            <li><a href="./formation.html#pge">Programme Grande École</a></li>
+                            <li><a href="./formation.html#bachelor">Bachelor</a></li>
+                            <li><a href="./formation.html#international">International</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="./equipe.html">Équipe</a>
+                        <ul class="sous-menu">
+                            <li><a href="./equipe.html#gouvernance">Gouvernance</a></li>
+                            <li><a href="./equipe.html#recherche">Recherche</a></li>
+                            <li><a href="./equipe.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./services.html">Services & Vie</a></li>
+                    <li><a href="./ressource.html">Ressources</a></li>
+                    <li><a href="./portail.html">Portail</a></li>
+                    <li><a href="./contact.html" class="active">Contact</a></li>
+                    <li><a href="./apropos.html" class="btn btn-secondary"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-small section-padding"
+            style="background: linear-gradient(to right, #d63384, #a61e63); padding-top: 120px;">
+            <div class="container">
+                <h1>Contactez-nous</h1>
+                <p>Nous sommes à votre écoute</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                    <div>
+                        <h2 class="mb-2">Nos Campus</h2>
+                        <div class="mb-2">
+                            <h3 style="color: var(--primary-color);">Campus Paris (Villejuif)</h3>
+                            <p>30-32 Avenue de la République, 94800 Villejuif</p>
+                            <p>Métro Ligne 7 : Villejuif Louis Aragon</p>
+                            <!-- Placeholder for map -->
+                             
+                            <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.6423331874025!2d2.3611763770576832!3d48.78871817132288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e673e24e04a9c3%3A0xc55cb3e676f95321!2sEfrei!5e0!3m2!1sfr!2sfr!4v1764836647649!5m2!1sfr!2sfr"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="mb-2">Envoyez-nous un message</h2>
+                        <form style="display: flex; flex-direction: column; gap: 1rem;">
+                            <select
+                                style="padding: 1rem; background: var(--surface-color); border: 1px solid var(--border-color); color: white; border-radius: 8px;">
+                                <option>Je suis un Candidat</option>
+                                <option>Je suis une Entreprise</option>
+                                <option>Je suis un Journaliste (Presse)</option>
+                            </select>
+                            <input type="text" placeholder="Nom complet"
+                                style="padding: 1rem; background: var(--surface-color); border: 1px solid var(--border-color); color: white; border-radius: 8px;">
+                            <input type="email" placeholder="Email"
+                                style="padding: 1rem; background: var(--surface-color); border: 1px solid var(--border-color); color: white; border-radius: 8px;">
+                            <textarea placeholder="Votre message" rows="5"
+                                style="padding: 1rem; background: var(--surface-color); border: 1px solid var(--border-color); color: white; border-radius: 8px;"></textarea>
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" style="background-color: var(--surface-color);">
+            <div class="container">
+                <h2 class="mb-2 text-center">Questions Fréquentes (FAQ)</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Comment accéder au campus ?</h4>
+                        <p>Le campus est accessible via la ligne 7 du métro (arrêt Villejuif Louis Aragon) et la future
+                            ligne 15.</p>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Y a-t-il des logements étudiants
+                            ?</h4>
+                        <p>Oui, nous avons des partenariats avec plusieurs résidences étudiantes à proximité immédiate
+                            du campus.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Quels sont les frais de scolarité
+                            ?</h4>
+                        <p>Les frais varient selon le programme. Veuillez consulter notre calculateur de frais sur le
+                            portail candidat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>EFREI</h4>
+                    <p>30-32 Avenue de la République<br>94800 Villejuif</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Accès rapide</h4>
+                    <ul>
+                        <li><a href="./formation.html">Formations</a></li>
+                        <li><a href="./contact.html">Admissions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EFREI - Département Informatique. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
