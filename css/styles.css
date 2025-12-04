@@ -351,13 +351,24 @@ footer {
 }
 
 .footer-column2 {
-    margin-left: 250px;
+    margin-left: 200px;
 }
 
-.logo-Linkedin {
-    height:20px;
+.logo-social{
+    height:50px;
     width: auto;
+    padding:10px;
+    
 }
+
+/* Le conteneur global */
+.social-links {
+    display: flex;           /* Active le mode Flexbox */
+    align-items: center;     /* Centre tout verticalement */
+    gap: 10px;              /* Espace entre les éléments */
+}
+
+
 
 .footer-column ul li { margin-bottom: 0.5rem; }
 .footer-column ul li a { color: var(--text-secondary); }
