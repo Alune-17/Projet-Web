@@ -173,26 +173,79 @@ header .container { display: flex; justify-content: space-between; align-items: 
 .fade-up-delayed { animation: fadeUp 1s ease-out 0.3s forwards; }
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
-/* --- KPI Section Hero (Horizontal) --- */
+
+
+/* --- KPI Section Hero (Style Cartes Flottantes) --- */
 .hero-footer-kpi {
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 16px; padding: 2rem;
-    max-width: 1000px; margin: 0 auto;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    background: transparent; /* On enlève le fond noir global */
+    border: none;
+    box-shadow: none;
+    padding: 0; 
+    max-width: 1200px;
+    margin: 2rem auto 0; /* Un peu d'espace au dessus */
+    width: 100%;
 }
 
 .kpi-grid-hero {
-    display: flex; justify-content: space-around; align-items: center;
-    gap: 1rem; flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Espace entre les cartes */
+    flex-wrap: wrap;
 }
-.kpi-card-hero { flex: 1; min-width: 150px; text-align: center; }
-.kpi-card-hero h3 { font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: 800; }
-.kpi-card-hero p { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: rgba(255, 255, 255, 0.8); }
+
+.kpi-card-hero {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    
+    /* L'effet Verre est appliqué ICI, sur chaque carte */
+    background: rgba(18, 18, 18, 0.6); /* Fond sombre semi-transparent */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    
+    padding: 1.5rem 1rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Petit effet premium au survol */
+.kpi-card-hero:hover {
+    transform: translateY(-5px); /* La carte remonte un peu */
+    border-color: var(--accent-color); /* Bordure bleue au survol */
+    background: rgba(18, 18, 18, 0.8);
+}
+
+/* Typographie */
+.kpi-card-hero h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.kpi-card-hero p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
 .kpi-number { color: var(--primary-color); }
 .kpi-number-success { color: var(--success-color); }
 
+/* Mobile */
+@media (max-width: 768px) {
+    .kpi-grid-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Carré de 4 sur mobile */
+    }
+    .kpi-card-hero {
+        min-width: auto;
+        max-width: none;
+    }
+}
 /* --- Trust Section --- */
 .trust-section { padding: 8rem 0; }
 .trust-logos {
