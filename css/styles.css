@@ -262,12 +262,14 @@ header .container {
 .hero-section {
     /* Garde le gradient sombre sur l'image du hero spécifique si tu le souhaites, 
        sinon retire cette ligne background pour voir l'image du body */
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/campus-bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/campusEfrei.webp");
     background-size: cover;
     background-position: center;
     height: 80vh;
     display: flex;
     align-items: center;
+
+
 }
 
 .hero-title {
@@ -351,24 +353,26 @@ footer {
 }
 
 .footer-column2 {
-    margin-left: 200px;
+    margin-left: 300px;
 }
 
 .logo-social{
-    height:50px;
+    height:60px;
     width: auto;
-    padding:10px;
-    
+    padding:2px;  
 }
 
-/* Le conteneur global */
+
 .social-links {
-    display: flex;           /* Active le mode Flexbox */
-    align-items: center;     /* Centre tout verticalement */
-    gap: 10px;              /* Espace entre les éléments */
+    display: flex;           
+    align-items: center;     
+    gap: 10px;              
 }
 
 
+.social-links a:hover {
+    color: var(--accent-color);
+}
 
 .footer-column ul li { margin-bottom: 0.5rem; }
 .footer-column ul li a { color: var(--text-secondary); }
