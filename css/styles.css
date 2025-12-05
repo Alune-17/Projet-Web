@@ -252,46 +252,95 @@ header .container {
     font-size: 0.8rem;
 }
 
-/* --- Sections Styles --- */
 
-.section-padding {
-    padding: var(--spacing-xl) 0;
-}
 
-/* Hero Section */
+/* --- Hero Section --- */
 .hero-section {
-    /* Garde le gradient sombre sur l'image du hero spécifique si tu le souhaites, 
-       sinon retire cette ligne background pour voir l'image du body */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/campusEfrei.webp");
+    position: relative;
+    /* On utilise un dégradé plus subtil : plus clair en haut, plus sombre en bas pour que le texte ressorte bien */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url("../img/campusEfrei.webp");
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    background-attachment: fixed; /* Effet Parallaxe : l'image reste fixe quand on scrolle */
+    height: 90vh; /* Un peu plus grand pour l'impact */
     display: flex;
     align-items: center;
-
-
+    justify-content: center;
+    color: white; /* Force le texte en blanc par défaut */
 }
 
+/* Le Titre */
 .hero-title {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    font-size: 4.5rem; /* Plus gros */
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: #ffffff; /* BLANC IMPÉRATIF sur fond sombre */
+    
+    /* Ombre portée pour détacher le texte de l'image */
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    
+    /* On enlève le gradient sur le texte car illisible sur une photo sombre */
+    background: none; 
+    -webkit-text-fill-color: initial;
 }
 
+/* Le Sous-titre */
 .hero-subtitle {
     font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 2rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9); /* Blanc légèrement transparent */
+    margin-bottom: 2.5rem;
+    max-width: 800px; /* Évite que la phrase soit trop longue sur grand écran */
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Les Boutons */
 .hero-actions {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
+}
+
+/* Petit ajustement pour le bouton secondaire sur fond sombre */
+.btn-secondary {
+    border-color: var(--accent-color);
+    color: white !important; /* Force le texte en blanc */
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color) !important;
+}
+
+/* --- Animation d'apparition (Fade Up) --- */
+.hero-content {
+    animation: fadeUp 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem; /* Plus petit sur mobile */
+    }
+    .hero-actions {
+        flex-direction: column; /* Boutons l'un sous l'autre sur mobile */
+        width: 100%;
+    }
+    .btn {
+        width: 100%; /* Boutons pleine largeur sur mobile */
+        text-align: center;
+    }
 }
 
 /* KPI Section */
@@ -314,25 +363,54 @@ header .container {
 .kpi-number { color: var(--primary-color); }
 .kpi-number-success { color: var(--success-color); }
 
-/* Trust Section */
+/* --- Trust Section (Aéré) --- */
+
+/* Conteneur des logos */
 .trust-logos {
     display: flex;
     justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 3rem;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran */
+    
+    /* C'est ici qu'on gère l'aération */
+    gap: 3rem;           /* Espace horizontal entre chaque logo */
+    margin-top: 3rem;    /* Espace entre le titre et les logos */
+    margin-bottom: 4rem; /* GRAND espace entre les logos et le texte en dessous */
 }
 
+/* Le style de tes carrés blancs (inchangé, juste propre) */
 .trust-placeholder {
     background: white;
-    padding: 1rem;
+    padding: 1rem 1.5rem; /* Un peu plus large sur les côtés */
     border-radius: 8px;
     color: black;
     font-weight: bold;
+    /* Pas d'animation, pas d'ombre, juste le bloc */
 }
 
-/* Footer */
+/* Conteneur du texte des récompenses */
+.trust-awards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espace entre les deux lignes de texte (Figaro vs Étudiant) */
+    
+    /* Pour que le texte ne soit pas trop large sur grand écran */
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+/* Style du texte */
+.trust-awards p {
+    font-size: 1.1rem; /* Texte légèrement plus grand pour la lisibilité */
+    margin: 0; /* On reset les marges par défaut pour utiliser le gap du parent */
+    color: var(--text-primary); /* Blanc/Clair */
+}
+
+.trust-awards strong {
+    color: var(--accent-color); /* Juste le nom du classement en couleur (optionnel) */
+}
+
+/* --- Footer --- */
 footer {
     background-color: var(--surface-color);
     padding: var(--spacing-lg) 0 var(--spacing-md);
@@ -347,36 +425,43 @@ footer {
     margin-bottom: var(--spacing-md);
 }
 
-.footer-column h4 {
-    color: var(--text-primary);
-    margin-bottom: var(--spacing-sm);
-}
-
+/* Colonne Réseaux Sociaux (Alignement) */
 .footer-column2 {
-    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligne le titre et les liens à gauche */
 }
 
-.logo-social{
-    height:60px;
-    width: auto;
-    padding:2px;  
+.footer-column2 h4 {
+    margin-bottom: 15px; /* Espace sous le titre "Suivez-nous" */
+    color: var(--text-primary);
 }
-
 
 .social-links {
     display: flex;           
-    align-items: center;     
+    flex-direction: column;   
     gap: 10px;              
 }
 
+/* Style de chaque lien (Image + Texte) */
+.social-links a {
+    display: flex;
+    align-items: center; /* Centre verticalement le texte par rapport à l'image */
+    gap: 10px; /* Espace entre le logo et le texte */
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: 0.3s;
+}
 
 .social-links a:hover {
     color: var(--accent-color);
+    transform: translateX(5px); /* Petit effet de mouvement au survol */
 }
 
-.footer-column ul li { margin-bottom: 0.5rem; }
-.footer-column ul li a { color: var(--text-secondary); }
-.footer-column ul li a:hover { color: var(--accent-color); }
+.logo-social {
+    height: 30px; /* Taille adaptée pour le footer */
+    width: auto;
+}
 
 .footer-bottom {
     text-align: center;
