@@ -170,11 +170,11 @@ header .container { display: flex; justify-content: space-between; align-items: 
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Garde l'effet parallax */
-    min-height: 100vh;
+    min-height: 110vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 14rem;
+    padding-top: 12rem;
     
 }
 
@@ -217,6 +217,131 @@ header .container { display: flex; justify-content: space-between; align-items: 
 
 /* Logos Partenaires */
 .trust-logos { display: flex; justify-content: center; flex-wrap: wrap; gap: 3rem; margin: 3rem 0; }
+
+/* --- TRUST SECTION (Harmonisation) --- */
+
+
+.trust-section {
+    position: relative;
+    z-index: 10; /* Pour passer AU-DESSUS de l'image du Hero */
+    
+    /* C'est la magie : on fait remonter toute la section de 80px vers le haut */
+    margin-top: -80px; 
+    
+    padding-top: 0; /* On enlève le padding du haut pour coller l'effet */
+    background: transparent; /* Important : pas de fond ici, c'est la carte qui a le fond */
+}
+/* La grande carte conteneur */
+.trust-card-glass {
+    background: radial-gradient(circle at top right, #0a1f35, #050505);
+    border: 1px solid var(--border-color);
+    border-radius: 24px; 
+    padding: 3rem;
+    max-width: 900px;
+    margin: 0 auto; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Les Badges (Logos) */
+.trust-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* Séparateur subtil */
+}
+
+.trust-badge {
+    font-weight: 700;
+    color: rgba(255,255,255,0.6); /* Texte gris clair */
+    border: 2px solid rgba(255,255,255,0.2);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.trust-badge:hover {
+    color: white;
+    border-color: var(--accent-color);
+    background: rgba(0, 212, 255, 0.1);
+}
+
+
+.trust-awards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.award-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255,255,255,0.03); /* Fond très léger */
+    padding: 1rem;
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+.award-item:hover {
+    transform: translateX(10px);
+    background: rgba(255,255,255,0.05);
+}
+
+.award-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 212, 255, 0.1); /* Fond cyan très léger */
+    border-radius: 12px;
+    color: var(--accent-color); /* Couleur du trait (Cyan) */
+    margin-right: 1rem;
+    flex-shrink: 0; /* Empêche l'icône de s'écraser */
+}
+
+.award-text strong {
+    display: block;
+    color: var(--accent-color);
+    margin-bottom: 0.2rem;
+}
+
+.award-text p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.trust-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+    gap: 4rem; 
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Nouveau style pour les images de logos */
+.trust-logo-img {
+    height: 100px; /* Hauteur fixe pour que tout soit aligné */
+    width: auto;  /* Largeur automatique */
+    object-fit: contain;    
+    transition: all 0.3s ease;
+}
+
+.trust-logo-img:hover {
+    opacity: 1; /* Pleine lumière au survol */
+    filter: grayscale(0%) brightness(100%); /* On remet les vraies couleurs au survol */
+    transform: scale(1.1); /* Petit zoom */
+}
+
 
 /* =========================================
    8. PAGE FORMATIONS (Mise en page aérée)
@@ -277,6 +402,8 @@ footer {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-md); margin-bottom: var(--spacing-md);
 }
+
+.footer-column2 { margin-left: 20rem; }
 
 /* Réseaux Sociaux (Alignement horizontal propre) */
 .social-links { display: flex; flex-direction: column; gap: 15px; }
