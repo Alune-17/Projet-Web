@@ -11,37 +11,37 @@
 
 <body>
     <header>
-            <div class="container">
-                <a href="index.html">
-                    <img class="logo" src="../img/Efrei-logo.svg" alt="Logo de l'EFREI - Paris Panthéon-Assas">
-                </a>
-                <nav>
-                    <ul class="menu-principal">
-                        <li><a href="./index.html" class="active">Accueil</a></li>
-                        <li class="dropdown">
-                            <a href="./formation.html">Formations</a>
-                            <ul class="sous-menu">
-                                <li><a href="./formation.html#pge">Programme Grande École</a></li>
-                                <li><a href="./formation.html#bachelor">Bachelor</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="./equipe.html">Équipe</a>
-                            <ul class="sous-menu">
-                                <li><a href="./equipe.html#gouvernance">Gouvernance</a></li>
-                                <li><a href="./equipe.html#recherche">Recherche</a></li>
-                                <li><a href="./equipe.html#alumni">Alumni</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./services.html">Services & Vie</a></li>
-                        <li><a href="./ressource.html">Ressources</a></li>
-                        <li><a href="./portail.html">Portail</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                        <li><a href="./apropos.html" class="btn btn-secondary btn-nav-small">À propos</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <div class="container">
+            <a href="index.html">
+                <img class="logo" src="../img/Efrei-logo.svg" alt="Logo de l'EFREI - Paris Panthéon-Assas">
+            </a>
+            <nav>
+                <ul class="menu-principal">
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="./formation.html" class="active">Formations</a>
+                        <ul class="sous-menu">
+                            <li><a href="./formation.html#pge">Programme Grande École</a></li>
+                            <li><a href="./formation.html#bachelor">Bachelor</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="./equipe.html">Équipe</a>
+                        <ul class="sous-menu">
+                            <li><a href="./equipe.html#gouvernance">Gouvernance</a></li>
+                            <li><a href="./equipe.html#recherche">Recherche</a></li>
+                            <li><a href="./equipe.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./services.html">Services & Vie</a></li>
+                    <li><a href="./ressource.html">Ressources</a></li>
+                    <li><a href="./portail.html">Portail</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./apropos.html" class="btn btn-secondary btn-nav-small">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <section class="hero-small section-padding"
@@ -55,46 +55,35 @@
         <section id="pge" class="section-padding">
             <div class="container">
                 <h2 class="mb-2">Programme Grande École (PGE)</h2>
-                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem;">
-                    <div>
-                        <h3 class="mb-1">Cycle Préparatoire</h3>
-                        <ul class="mb-2" style="list-style: none;">
-                            <li
-                                style="background: var(--surface-color); padding: 1rem; margin-bottom: 0.5rem; border-radius: 8px;">
-                                Prépa Intégrée Scientifique</li>
-                            <li
-                                style="background: var(--surface-color); padding: 1rem; margin-bottom: 0.5rem; border-radius: 8px;">
-                                Prépa Biologie & Numérique</li>
-                            <li
-                                style="background: var(--surface-color); padding: 1rem; margin-bottom: 0.5rem; border-radius: 8px;">
-                                Section Internationale (100% Anglais)</li>
-                            <li
-                                style="background: var(--surface-color); padding: 1rem; margin-bottom: 0.5rem; border-radius: 8px;">
-                                Prépa Renforcée</li>
+                
+                <div class="pge-layout">
+                    <div class="pge-col-prepa">
+                        <h3 class="mb-2">Cycle Préparatoire</h3>
+                        <ul class="list-prepa">
+                            <li>Prépa Intégrée Scientifique</li>
+                            <li>Prépa Biologie & Numérique</li>
+                            <li>Section Internationale (100% Anglais)</li>
+                            <li>Prépa Renforcée</li>
                         </ul>
                     </div>
-                    <div>
-                        <h3 class="mb-1">Cycle Ingénieur - Majeures</h3>
-                        <div
-                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                            <div class="card"
-                                style="background: var(--surface-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                                <h4 style="color: var(--accent-color);">Information Technology</h4>
+
+                    <div class="pge-col-inge">
+                        <h3 class="mb-2">Cycle Ingénieur - Majeures</h3>
+                        <div class="grid-majors">
+                            <div class="card-formation">
+                                <h4>Information Technology</h4>
                                 <p>Software Engineering, IT for Finance, IS Strategy</p>
                             </div>
-                            <div class="card"
-                                style="background: var(--surface-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                                <h4 style="color: var(--accent-color);">Sécurité & Réseaux</h4>
+                            <div class="card-formation">
+                                <h4>Sécurité & Réseaux</h4>
                                 <p>Cybersécurité (Gouvernance ou Infra), Network</p>
                             </div>
-                            <div class="card"
-                                style="background: var(--surface-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                                <h4 style="color: var(--accent-color);">Data Science</h4>
+                            <div class="card-formation">
+                                <h4>Data Science</h4>
                                 <p>Data Engineering & IA, Business Intelligence, Bio-Info</p>
                             </div>
-                            <div class="card"
-                                style="background: var(--surface-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                                <h4 style="color: var(--accent-color);">Systèmes Embarqués</h4>
+                            <div class="card-formation">
+                                <h4>Systèmes Embarqués</h4>
                                 <p>Robotique, Avionique, Transports Intelligents</p>
                             </div>
                         </div>
@@ -103,23 +92,21 @@
             </div>
         </section>
 
-        <section id="bachelor" class="section-padding" style="background-color: var(--surface-color);">
+        <section id="bachelor" class="section-padding bg-surface">
             <div class="container">
                 <h2 class="mb-2">Bachelors & Mastères</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div class="card"
-                        style="padding: 2rem; border: 1px solid var(--border-color); border-radius: 12px;">
+                <div class="grid-bachelors">
+                    <div class="card-formation large-card">
                         <h3>Bachelors</h3>
-                        <ul style="list-style: disc; padding-left: 1.5rem; margin-top: 1rem;">
+                        <ul class="list-disc">
                             <li>Bachelor Informatique</li>
                             <li>Bachelor Cybersécurité</li>
                             <li>Bachelor Tech & Business</li>
                         </ul>
                     </div>
-                    <div class="card"
-                        style="padding: 2rem; border: 1px solid var(--border-color); border-radius: 12px;">
+                    <div class="card-formation large-card">
                         <h3>Mastères Spécialisés</h3>
-                        <ul style="list-style: disc; padding-left: 1.5rem; margin-top: 1rem;">
+                        <ul class="list-disc">
                             <li>UX Design</li>
                             <li>Data & IA</li>
                             <li>Management des SI</li>
@@ -132,43 +119,42 @@
         <section class="section-padding">
             <div class="container text-center">
                 <h2 class="mb-2">Stack Technique Enseignée</h2>
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-                    <!-- Using text for now, but these would be logos -->
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">Java (Spring)</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">Python (Django)</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">C++</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">Node.js</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">React</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">Vue.js</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">Docker</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">AWS</span>
+                <div class="tech-stack-container">
+                    <span class="tech-badge">Java (Spring)</span>
+                    <span class="tech-badge">Python (Django)</span>
+                    <span class="tech-badge">C++</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">Vue.js</span>
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">AWS</span>
                 </div>
             </div>
         </section>
 
-        <section id="international" class="section-padding" style="background-color: var(--surface-color);">
+        <section id="international" class="section-padding bg-surface">
             <div class="container">
                 <h2 class="mb-2">International</h2>
                 <p class="mb-2">106 partenaires dans 46 pays. Plus de 40 doubles diplômes.</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div class="grid-international">
                     <div>
-                        <h4 style="color: var(--primary-color);">Amérique du Nord</h4>
-                        <ul>
+                        <h4 class="text-primary">Amérique du Nord</h4>
+                        <ul class="list-simple">
                             <li>UC Irvine</li>
                             <li>McGill</li>
                             <li>Concordia</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 style="color: var(--primary-color);">Europe</h4>
-                        <ul>
+                        <h4 class="text-primary">Europe</h4>
+                        <ul class="list-simple">
                             <li>Partenaires Erasmus+</li>
                             <li>Staffordshire UK</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 style="color: var(--primary-color);">Asie</h4>
-                        <ul>
+                        <h4 class="text-primary">Asie</h4>
+                        <ul class="list-simple">
                             <li>KAIST (Corée)</li>
                             <li>Beihang University (Chine)</li>
                         </ul>
@@ -179,38 +165,37 @@
     </main>
 
     <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-column">
-                        <h4>EFREI</h4>
-                        <p>30-32 Avenue de la République<br>94800 Villejuif</p>
-                        <p>Métro Ligne 7 : Villejuif Louis Aragon</p>
-                    </div>
-                    <div class="footer-column2">
-                        <h4>Suivez-nous</h4>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/school/efrei/" target="_blank">
-                                <img class="logo-social" src="../img/logo-Linkedin.png" alt="LinkedIn">
-                                <span>LinkedIn</span>
-                            </a>
-                            
-                            <a href="https://x.com/Efrei_Paris" target="_blank">
-                                <img class="logo-social" src="../img/Logo-X.png" alt="X">
-                                <span>X</span>
-                            </a>
-
-                            <a href="https://www.instagram.com/efrei_paris/" target="_blank">
-                                <img class="logo-social" src="../img/logo-Instagram.png" alt="Instagram">
-                                <span>Instagram</span>
-                            </a>
-                        </div>
-                    </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>EFREI</h4>
+                    <p>30-32 Avenue de la République<br>94800 Villejuif</p>
+                    <p>Métro Ligne 7 : Villejuif Louis Aragon</p>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 EFREI - Département Informatique. Tous droits réservés.</p>
+                <div class="footer-column2">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/school/efrei/" target="_blank" class="social-item">
+                            <img class="logo-social" src="../img/logo-Linkedin.png" alt="LinkedIn">
+                            <span>LinkedIn</span>
+                        </a>
+                        
+                        <a href="https://x.com/Efrei_Paris" target="_blank" class="social-item">
+                            <img class="logo-social" src="../img/Logo-X.png" alt="X">
+                            <span>X</span>
+                        </a>
+
+                        <a href="https://www.instagram.com/efrei_paris/" target="_blank" class="social-item">
+                            <img class="logo-social" src="../img/logo-Instagram.png" alt="Instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </footer>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EFREI - Département Informatique. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
