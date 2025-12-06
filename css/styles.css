@@ -44,13 +44,13 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
-    background-color: var(--bg-color); /* Fond par défaut (Noir) */
+    background-color: var(--bg-color);
 }
 
 a { text-decoration: none; color: inherit; transition: var(--transition-fast); }
 ul { list-style: none; }
 
-/* Image de fond uniquement sur l'accueil (via classe body) */
+/* Image de fond uniquement sur l'accueil */
 body.home-page {
     background: url('../img/campusEfrei.webp') no-repeat center center fixed;
     background-size: cover;
@@ -73,7 +73,7 @@ p { color: var(--text-secondary); margin-bottom: var(--spacing-sm); text-shadow:
 .bg-surface { background-color: rgba(26, 26, 26, 0.5); }
 
 /* ==========================================================================
-   3. COMPOSANTS (UI KIT)
+   3. COMPOSANTS UI
    ========================================================================== */
 /* BOUTONS */
 .btn {
@@ -90,7 +90,7 @@ p { color: var(--text-secondary); margin-bottom: var(--spacing-sm); text-shadow:
 .btn-secondary:hover { background: var(--accent-color); color: var(--bg-color); }
 .btn-nav-small { padding: 0.5rem 1rem; font-size: 0.8rem; }
 
-/* BADGES TECH */
+/* BADGES TECH (Stack) */
 .tech-stack-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
 .tech-badge {
     padding: 0.8rem 1.5rem; background: var(--surface-hover);
@@ -135,36 +135,27 @@ header .container { display: flex; justify-content: space-between; align-items: 
 .sous-menu li a:hover { background-color: var(--surface-hover); color: var(--text-primary); }
 
 /* ==========================================================================
-   5. PAGE ACCUEIL (HERO & TRUST)
+   5. PAGE ACCUEIL
    ========================================================================== */
-/* HERO PRINCIPAL */
+/* HERO SECTION */
 .hero-section {
     position: relative;
-    /* Image + Dégradé pour transition douce vers le bas */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url("../img/campusEfrei.webp");
     background-size: cover; background-position: center; background-attachment: fixed;
-    min-height: 110vh;
-    display: flex; align-items: center; justify-content: center;
+    min-height: 110vh; display: flex; align-items: center; justify-content: center;
     padding-top: 12rem;
 }
-
-/* Ligne lumineuse en bas du Hero */
+/* Ligne lumineuse en bas */
 .hero-section::after {
-    content: ''; position: absolute; bottom: 0; left: 0;
-    width: 100%; height: 2px;
+    content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px;
     background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
     z-index: 2;
 }
+.hero-title { font-size: 4.5rem; font-weight: 800; margin-bottom: 1.5rem; color: #ffffff; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); }
 
-.hero-title {
-    font-size: 4.5rem; font-weight: 800; margin-bottom: 1.5rem;
-    color: #ffffff; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* KPI (Chiffres Clés) */
+/* KPI CARDS */
 .hero-footer-kpi { margin-top: 6rem; width: 100%; }
 .kpi-grid-hero { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
-
 .kpi-card-hero {
     flex: 1; min-width: 200px; max-width: 250px;
     background: rgba(18, 18, 18, 0.6); backdrop-filter: blur(12px);
@@ -176,35 +167,26 @@ header .container { display: flex; justify-content: space-between; align-items: 
 .kpi-number { color: var(--primary-color); }
 .kpi-number-success { color: var(--success-color); }
 
-/* SECTION CONFIANCE (Avis & Récompenses) */
-.trust-section {
-    height: 500px; position: relative;
-    margin-top: 60px; padding-top: 0;
-}
+/* TRUST SECTION & AVIS */
+.trust-section { height: 500px; position: relative; margin-top: 60px; padding-top: 0; }
 
-/* CARTE EXCELLENCE (Glassmorphism) */
 .trust-card-glass {
-    position: relative; z-index: 2; /* Au-dessus du marquee */
+    position: relative; z-index: 2;
     background: radial-gradient(circle at top right, #0a1f35, #050505);
     border: 1px solid var(--border-color); border-radius: 24px;
     padding: 3rem; max-width: 900px; margin: 0 auto;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* LOGOS (CTI, CGE...) */
 .trust-logos {
     display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
     gap: 4rem; margin-bottom: 3rem; padding-bottom: 2rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-.trust-logo-img {
-    height: 100px; width: auto; object-fit: contain; transition: all 0.3s ease;
-}
-.trust-logo-img:hover {
-    opacity: 1; filter: grayscale(0%) brightness(100%); transform: scale(1.1);
-}
+.trust-logo-img { height: 100px; width: auto; object-fit: contain; transition: all 0.3s ease; }
+.trust-logo-img:hover { opacity: 1; filter: grayscale(0%) brightness(100%); transform: scale(1.1); }
 
-/* LISTE RÉCOMPENSES */
+/* AWARDS LIST */
 .trust-awards-list { display: flex; flex-direction: column; gap: 1.5rem; }
 .award-item {
     display: flex; align-items: center; gap: 1rem;
@@ -212,7 +194,6 @@ header .container { display: flex; justify-content: space-between; align-items: 
     transition: transform 0.2s;
 }
 .award-item:hover { transform: translateX(10px); background: rgba(255,255,255,0.05); }
-
 .award-icon-box {
     display: flex; align-items: center; justify-content: center;
     width: 48px; height: 48px; background: rgba(0, 212, 255, 0.1);
@@ -221,7 +202,7 @@ header .container { display: flex; justify-content: space-between; align-items: 
 .award-text strong { display: block; color: var(--accent-color); margin-bottom: 0.2rem; }
 .award-text p { margin: 0; font-size: 0.95rem; color: var(--text-secondary); }
 
-/* MARQUEE AVIS (Fond Défilant) */
+/* MARQUEE */
 .reviews-marquee-container {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     overflow: hidden; z-index: 0;
@@ -231,66 +212,198 @@ header .container { display: flex; justify-content: space-between; align-items: 
 }
 .marquee-track { display: flex; width: max-content; gap: 0; }
 .review-group { display: flex; align-items: center; gap: 2rem; padding-right: 2rem; }
-
 .review-card {
     background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px; padding: 1rem 1.5rem; width: 300px; flex-shrink: 0;
     color: rgba(255, 255, 255, 0.7);
 }
 .review-card small { display: block; margin-top: 0.5rem; font-size: 0.8rem; color: var(--accent-color); }
-
 .scroll-left { animation: scrollLeft 60s linear infinite; }
-@keyframes scrollLeft {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-33.3333%); } /* Pour 3 groupes */
-}
+@keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-33.3333%); } }
 
 /* ==========================================================================
    6. PAGE FORMATIONS
    ========================================================================== */
-/* HERO PIVOT (Commun aux pages internes) */
+
+/* Ajustement du padding car on a enlevé le dégradé */
 .hero-small {
-    padding-top: 140px; padding-bottom: 3rem;
+    padding-top: 180px; 
+    padding-bottom: 4rem;
     view-transition-name: banner-pivot; contain: layout;
 }
-
-/* MISE EN PAGE GRILLE */
-.pge-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; }
-
-/* LISTE PRÉPAS */
-.list-prepa { display: flex; flex-direction: column; gap: 1rem; }
-.list-prepa li {
-    background: var(--surface-color); padding: 1.5rem;
-    border-radius: 12px; border: 1px solid var(--border-color);
-    font-weight: 500; transition: transform 0.2s ease, border-color 0.2s ease;
+.hero-bg-blue {
+    /* Le dégradé bleu exact que tu avais à l'origine */
+    background: linear-gradient(to right, #003366, #0056b3);
+    
+    /* On s'assure que le texte reste blanc dessus */
+    color: #ffffff;
 }
-.list-prepa li:hover { transform: translateX(10px); border-color: var(--accent-color); }
 
-/* GRILLES */
-.grid-majors { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-.grid-bachelors { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; }
-.grid-international { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-top: 2rem; }
+/* Petit ajustement pour que le texte reste blanc même si on change le thème global */
+.hero-bg-blue h1, 
+.hero-bg-blue p {
+    color: #ffffff;
+}
+/* --- PGE TIMELINE --- */
+.pge-timeline-container {
+    display: flex; flex-direction: column; gap: 3rem; margin-bottom: 4rem;
+}
 
-/* CARTES DE FORMATION */
-.card-formation {
-    background: var(--surface-color); padding: 2.5rem;
+.timeline-header {
+    display: flex; align-items: center; justify-content: center; gap: 3rem;
+    background: var(--surface-color); padding: 2rem;
     border-radius: 16px; border: 1px solid var(--border-color);
-    height: 100%; display: flex; flex-direction: column; justify-content: center;
+    max-width: 1200px; margin: 0 auto; width: 95%;
+}
+.timeline-step { text-align: center; flex: 1; }
+.year-badge {
+    background: var(--primary-color); color: #fff;
+    padding: 0.4rem 1.2rem; border-radius: 50px;
+    font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+    display: inline-block; margin-bottom: 1rem;
+}
+.timeline-step h3 { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary); }
+.timeline-step p { font-size: 0.95rem; color: var(--text-secondary); margin: 0; }
+.timeline-arrow { color: var(--accent-color); opacity: 0.6; }
+
+/* GRILLE PRINCIPALE */
+.timeline-content {
+    display: grid;
+    grid-template-columns: 320px 1px 1fr;
+    gap: 4rem;
+    align-items: stretch;
+    max-width: 1200px; margin: 0 auto; width: 95%;
+}
+
+.content-separator {
+    background: linear-gradient(to bottom, transparent, var(--border-color), transparent);
+    width: 1px; height: 100%;
+}
+
+.column-title {
+    font-size: 1rem; text-transform: uppercase; letter-spacing: 1.5px;
+    color: var(--accent-color); margin-bottom: 2rem; border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem; font-weight: 700;
+}
+
+/* COLONNE GAUCHE (PRÉPA) */
+.cards-list { display: flex; flex-direction: column; gap: 1rem; }
+.pge-card {
+    background: var(--surface-color); border: 1px solid var(--border-color);
+    border-radius: 12px; padding: 1.2rem;
+    display: flex; align-items: center; gap: 1rem;
+    transition: all 0.2s ease;
+}
+.pge-card:hover {
+    border-color: var(--accent-color); transform: translateX(5px); background: var(--surface-hover);
+}
+.icon-circle {
+    font-size: 1.5rem; width: 40px; height: 40px;
+    background: rgba(255,255,255,0.05); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+}
+.card-info { display: flex; flex-direction: column; }
+.card-info strong { color: var(--text-primary); font-size: 1rem; margin-bottom: 0.2rem; }
+.card-info span { color: var(--text-secondary); font-size: 0.85rem; }
+
+/* COLONNE DROITE (MAJEURES - STYLE SOBRE MONOCHROME) */
+.majors-grid-pro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.major-item {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    /* Barre latérale grise par défaut */
+    border-left: 4px solid var(--border-color); 
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex; flex-direction: column;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.major-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.02);
+    /* Au survol, on peut mettre la bordure en cyan si tu veux un petit effet, sinon retire cette ligne */
+    border-left-color: var(--accent-color);
+}
+
+.major-item h5 {
+    font-size: 1.1rem; color: var(--text-primary); font-weight: 700;
+    margin-bottom: 1rem; padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.major-item ul {
+    list-style: none; padding: 0; margin: 0;
+}
+.major-item li {
+    font-size: 0.9rem; color: var(--text-secondary);
+    margin-bottom: 0.5rem; padding-left: 10px; position: relative;
+}
+/* Petit tiret tech devant chaque matière */
+.major-item li::before {
+    content: '-'; position: absolute; left: 0; color: var(--border-color);
+}
+
+/* J'AI SUPPRIMÉ ICI LES DÉFINITIONS DE COULEURS (accent-cyan, etc.) */
+
+/* --- SECTION BACHELORS --- */
+.grid-bachelors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.card-formation {
+    background: var(--surface-color);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    height: 100%;
+    display: flex; flex-direction: column; justify-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card-formation:hover {
-    transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-color: var(--primary-color);
 }
-.card-formation h4 { color: var(--accent-color); font-size: 1.3rem; margin-bottom: 1rem; }
 
-/* LISTES À PUCES */
-.list-disc { list-style: disc; padding-left: 1.5rem; margin-top: 1rem; color: var(--text-secondary); }
-.list-disc li { margin-bottom: 0.5rem; }
+.card-formation h3 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
 
+/* LISTES CLASSIQUES */
+.list-disc { list-style: disc; padding-left: 1.5rem; color: var(--text-secondary); line-height: 1.8; }
 .list-simple { list-style: none; padding: 0; }
-.list-simple li { margin-bottom: 0.8rem; position: relative; padding-left: 1.5rem; color: var(--text-secondary); }
+.list-simple li { margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; color: var(--text-secondary); }
 .list-simple li::before { content: "→"; position: absolute; left: 0; color: var(--accent-color); }
 
+/* GRILLE INTERNATIONALE */
+.grid-international {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem; margin-top: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .timeline-content { grid-template-columns: 1fr; gap: 3rem; }
+    .content-separator { display: none; }
+    .majors-grid-pro { grid-template-columns: 1fr; }
+    .timeline-header { flex-direction: column; }
+    .timeline-arrow { transform: rotate(90deg); margin: 1rem 0; }
+    .grid-bachelors { grid-template-columns: 1fr; }
+}
 /* ==========================================================================
    7. FOOTER
    ========================================================================== */
@@ -300,23 +413,15 @@ footer {
 }
 .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
 .footer-column2 { margin-left: 20rem; }
-
 .social-links { display: flex; flex-direction: column; gap: 15px; }
-.social-item {
-    display: flex; align-items: center; gap: 15px; text-decoration: none; color: var(--text-secondary); transition: 0.3s;
-}
+.social-item { display: flex; align-items: center; gap: 15px; text-decoration: none; color: var(--text-secondary); transition: 0.3s; }
 .social-item:hover { color: var(--accent-color); transform: translateX(5px); }
 .logo-social { width: 24px; height: 24px; object-fit: contain; }
-
-.footer-bottom {
-    text-align: center; padding-top: var(--spacing-md);
-    border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.9rem;
-}
+.footer-bottom { text-align: center; padding-top: var(--spacing-md); border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.9rem; }
 
 /* ==========================================================================
    8. ANIMATIONS & LOADING
    ========================================================================== */
-/* LOADING SCREEN */
 #loading-screen {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background-color: var(--primary-color); z-index: 9999;
@@ -327,35 +432,34 @@ footer {
 .loader-logo { width: 100px; margin-bottom: var(--spacing-md); animation: pulse 2s infinite; filter: brightness(0) invert(1); }
 .loader-bar { width: 200px; height: 4px; background: rgba(255, 255, 255, 0.2); border-radius: 2px; overflow: hidden; }
 .loader-progress { width: 0%; height: 100%; background: #fff; animation: load 2s ease-in-out forwards; }
-
 @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } }
 @keyframes load { 0% { width: 0%; } 100% { width: 100%; } }
 
-/* PAGE TRANSITIONS */
 @view-transition { navigation: auto; }
 main > section:not(.hero-small), footer { view-transition-name: page-content; }
 ::view-transition-old(page-content) { animation: fadeOutUp 0.5s ease-in-out forwards; }
 ::view-transition-new(page-content) { animation: fadeInUp 0.5s ease-in-out forwards; }
 ::view-transition-group(banner-pivot) { animation-duration: 0.5s; animation-timing-function: ease-in-out; }
-
 @keyframes fadeOutUp { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-20px); } }
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
-/* HERO ENTRANCE */
 .hero-content { opacity: 0; animation: fadeUp 1s ease-out forwards; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
-/* FALLBACK */
 @media (prefers-reduced-motion: no-preference) { body { animation: pageEnter 0.6s ease-out; } }
 @keyframes pageEnter { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
 
 /* ==========================================================================
-   9. RESPONSIVE (MOBILE)
+   9. RESPONSIVE
    ========================================================================== */
 @media (max-width: 900px) {
+    .timeline-content { grid-template-columns: 1fr; gap: 3rem; }
+    .content-separator { display: none; }
+    .majors-grid { grid-template-columns: 1fr; }
+    .timeline-header { flex-direction: column; }
+    .timeline-arrow { transform: rotate(90deg); margin: 1rem 0; }
+    
     .pge-layout { grid-template-columns: 1fr; gap: 3rem; }
     .hero-title { font-size: 2.5rem; }
     .kpi-grid-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
     .footer-content { text-align: center; }
-    .footer-column2 { margin-left: 0; align-items: center; } /* Correction marge sur mobile */
+    .footer-column2 { margin-left: 0; align-items: center; }
 }
