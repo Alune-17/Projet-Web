@@ -10,6 +10,13 @@
 </head>
 
 <body>
+    <div id="loading-screen">
+        <img class="loader-logo" src="../img/Efrei-logo.svg" alt="Logo EFREI">
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <a href="index.html">
@@ -23,78 +30,118 @@
                         <ul class="sous-menu">
                             <li><a href="./formation.html#pge">Programme Grande École</a></li>
                             <li><a href="./formation.html#bachelor">Bachelor</a></li>
-                            <li><a href="./formation.html#international">International</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="./equipe.html" class="active">Équipe</a>
                         <ul class="sous-menu">
-                            <li><a href="#gouvernance">Gouvernance</a></li>
-                            <li><a href="#recherche">Recherche</a></li>
-                            <li><a href="#alumni">Alumni</a></li>
+                            <li><a href="./equipe.html#gouvernance">Gouvernance</a></li>
+                            <li><a href="./equipe.html#enseignants">Enseignants</a></li>
+                            <li><a href="./equipe.html#alumni">Alumni</a></li>
                         </ul>
                     </li>
                     <li><a href="./services.html">Services & Vie</a></li>
                     <li><a href="./ressource.html">Ressources</a></li>
                     <li><a href="./portail.html">Portail</a></li>
                     <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./apropos.html" class="btn btn-secondary"
-                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">À propos</a></li>
+                    <li><a href="./apropos.html" class="btn btn-secondary btn-nav-small">À propos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero-small section-padding"
-            style="background: linear-gradient(to right, #6f42c1, #5a32a3); padding-top: 120px;">
+        <section class="hero-small hero-page section-padding">
             <div class="container">
-                <h1>L'Équipe</h1>
-                <p>Ceux qui font l'excellence de l'EFREI</p>
+                <h1>Notre Équipe</h1>
+                <p>Les femmes et hommes qui font l'EFREI</p>
             </div>
         </section>
 
         <section id="gouvernance" class="section-padding">
             <div class="container">
                 <h2 class="mb-2">Gouvernance</h2>
-                <p class="mb-2">Une direction engagée pour la réussite de tous.</p>
-                <div style="background: var(--surface-color); padding: 2rem; border-radius: 12px; text-align: center;">
-                    <p>Organigramme complet disponible sur le site de l'Université Paris-Panthéon-Assas.</p>
-                    <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Voir l'organigramme</a>
+                <div class="grid-auto">
+                    <div class="card-standard">
+                        <div class="profile-circle"></div>
+                        <h3>Dr. Emmanuel PERRIN</h3>
+                        <p>Directeur Général</p>
+                        <p>Pilote la stratégie et le développement de l'école.</p>
+                    </div>
+                    <div class="card-standard">
+                        <div class="profile-circle"></div>
+                        <h3>Mme Sophie BERNIÈRE</h3>
+                        <p>Directrice des Études</p>
+                        <p>Supervise l'ensemble des programmes académiques.</p>
+                    </div>
+                    <div class="card-standard">
+                        <div class="profile-circle"></div>
+                        <h3>M. Frédéric TASSY</h3>
+                        <p>Directeur RSE et Vie Étudiante</p>
+                        <p>En charge du bien-être étudiant et de l'engagement sociétal.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="recherche" class="section-padding" style="background-color: var(--surface-color);">
+        <section id="enseignants" class="section-padding bg-surface">
             <div class="container">
-                <h2 class="mb-2">Recherche & Innovation</h2>
-                <p class="mb-2">L'Efrei Research Lab : 55 chercheurs dédiés à l'innovation.</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                    <div class="card"
-                        style="padding: 1.5rem; border: 1px solid var(--border-color); border-radius: 12px;">
-                        <h4 style="color: var(--accent-color);">Axes de Recherche</h4>
-                        <ul style="list-style: disc; padding-left: 1.5rem; margin-top: 0.5rem;">
-                            <li>Données & IA</li>
-                            <li>Sécurité & Réseaux</li>
-                            <li>Systèmes Embarqués</li>
-                        </ul>
+                <h2 class="mb-2">Équipe Enseignante</h2>
+                <p class="mb-2">Nos enseignants-chercheurs du département informatique.</p>
+                <div class="grid-auto">
+                    <!-- Asma GABIS - Responsable -->
+                    <div class="card-team">
+                        <img src="https://web.archive.org/web/20250905132704im_/https://www.efrei.fr/wp-content/uploads/2024/05/GABIS-Asma.jpg"
+                            alt="Asma GABIS">
+                        <h4>Asma GABIS</h4>
+                        <p class="role">Responsable du département informatique</p>
+                        <p class="email"><a href="mailto:asma.gabis@efrei.fr">asma.gabis@efrei.fr</a></p>
                     </div>
-                    <!-- Placeholder for researcher profiles -->
-                    <div class="card"
-                        style="padding: 1.5rem; border: 1px solid var(--border-color); border-radius: 12px;">
-                        <div
-                            style="width: 60px; height: 60px; background: #333; border-radius: 50%; margin-bottom: 1rem;">
-                        </div>
-                        <h4>Dr. Nom Prénom</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Directeur de Recherche</p>
+
+                    <!-- Mohamad GHASSANY -->
+                    <div class="card-team">
+                        <img src="https://web.archive.org/web/20250905132704im_/https://www.efrei.fr/wp-content/uploads/2022/02/GHASSANY-Mohamad_2.jpg"
+                            alt="Mohamad GHASSANY">
+                        <h4>Mohamad GHASSANY</h4>
+                        <p class="role">Enseignant chercheur et Responsable de la filière Data & IA</p>
+                        <p class="email"><a href="mailto:mohamad.ghassany@efrei.fr">mohamad.ghassany@efrei.fr</a></p>
                     </div>
-                    <div class="card"
-                        style="padding: 1.5rem; border: 1px solid var(--border-color); border-radius: 12px;">
-                        <div
-                            style="width: 60px; height: 60px; background: #333; border-radius: 50%; margin-bottom: 1rem;">
-                        </div>
-                        <h4>Dr. Nom Prénom</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Chercheur IA</p>
+
+                    <!-- Johannes GOMOLKA -->
+                    <div class="card-team">
+                        <img src="https://web.archive.org/web/20250905132704im_/https://www.efrei.fr/wp-content/uploads/2019/03/gomolka-johannes.jpg"
+                            alt="Johannes GOMOLKA">
+                        <h4>Johannes GOMOLKA</h4>
+                        <p class="role">Enseignant chercheur et Responsable de la majeure IT for Finance</p>
+                        <p class="email"><a href="mailto:johannes.gomolka@efrei.fr">johannes.gomolka@efrei.fr</a></p>
+                    </div>
+
+                    <!-- Nicolas FLASQUE -->
+                    <div class="card-team">
+                        <img src="https://web.archive.org/web/20250905132704im_/https://www.efrei.fr/wp-content/uploads/2024/05/Flasque-Nicolas.jpg"
+                            alt="Nicolas FLASQUE">
+                        <h4>Nicolas FLASQUE</h4>
+                        <p class="role">Enseignant ingénieur pédagogique (Docteur en informatique)</p>
+                        <p class="email"><a href="mailto:nicolas.flasque@efrei.fr">nicolas.flasque@efrei.fr</a></p>
+                    </div>
+
+                    <!-- Yvan GUIFO FODJO -->
+                    <div class="card-team">
+                        <img src="https://web.archive.org/web/20250905132704im_/https://www.efrei.fr/wp-content/uploads/2024/05/GUIFO-Yvan.jpg"
+                            alt="Yvan GUIFO FODJO">
+                        <h4>Yvan GUIFO FODJO</h4>
+                        <p class="role">Enseignant chercheur (Génie logiciel / Informatique)</p>
+                        <p class="email"><a href="mailto:yvan.guifo-fodjo@efrei.fr">yvan.guifo-fodjo@efrei.fr</a></p>
+                    </div>
+
+                    <!-- Stefani EL KALAMOUNI -->
+                    <div class="card-team">
+                        <img src="https://web.archive.org/web/20250905132704im_/https://www.efrei.fr/wp-content/uploads/2025/02/EL-KALAMOUNI-Stefani.jpg"
+                            alt="Stefani EL KALAMOUNI">
+                        <h4>Stefani EL KALAMOUNI</h4>
+                        <p class="role">Enseignante (Data scientiste)</p>
+                        <p class="email"><a
+                                href="mailto:stefani.el-kalamouni@efrei.fr">stefani.el-kalamouni@efrei.fr</a></p>
                     </div>
                 </div>
             </div>
@@ -103,21 +150,21 @@
         <section id="alumni" class="section-padding">
             <div class="container">
                 <h2 class="mb-2">Success Stories Alumni</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div class="card" style="background: var(--surface-color); padding: 2rem; border-radius: 12px;">
-                        <h3 style="color: var(--primary-color);">Steve Peguet</h3>
-                        <p class="mb-1"><strong>Promo 1998</strong> - Directeur Scientifique chez Alten</p>
-                        <p>"L'EFREI m'a donné les clés pour comprendre les enjeux technologiques de demain."</p>
+                <div class="grid-auto">
+                    <div class="card-standard">
+                        <h3>André Truong</h3>
+                        <p class="text-primary">Promo 1959</p>
+                        <p>Inventeur du Micral-N, premier micro-ordinateur de l'histoire.</p>
                     </div>
-                    <div class="card" style="background: var(--surface-color); padding: 2rem; border-radius: 12px;">
-                        <h3 style="color: var(--primary-color);">Mathieu Nebra</h3>
-                        <p class="mb-1"><strong>Promo 2008</strong> - Co-fondateur d'OpenClassrooms</p>
-                        <p>"Entreprendre, c'est avant tout transmettre. Une valeur forte à l'EFREI."</p>
+                    <div class="card-standard">
+                        <h3>Marie Dupont</h3>
+                        <p class="text-primary">Promo 2010</p>
+                        <p>CTO chez une licorne de la FinTech.</p>
                     </div>
-                    <div class="card" style="background: var(--surface-color); padding: 2rem; border-radius: 12px;">
-                        <h3 style="color: var(--primary-color);">Caroline Esposito</h3>
-                        <p class="mb-1"><strong>Profil Hybride</strong> - Pianiste & Business Analyst</p>
-                        <p>L'alliance parfaite entre art et technologie.</p>
+                    <div class="card-standard">
+                        <h3>Pierre Martin</h3>
+                        <p class="text-primary">Promo 2015</p>
+                        <p>Fondateur d'une startup GreenTech valorisée 50M€.</p>
                     </div>
                 </div>
             </div>
@@ -130,18 +177,23 @@
                 <div class="footer-column">
                     <h4>EFREI</h4>
                     <p>30-32 Avenue de la République<br>94800 Villejuif</p>
+                    <p>Métro Ligne 7 : Villejuif Louis Aragon</p>
                 </div>
-                <div class="footer-column">
-                    <h4>Accès rapide</h4>
-                    <ul>
-                        <li><a href="./formation.html">Formations</a></li>
-                        <li><a href="./contact.html">Admissions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
+                <div class="footer-column2">
                     <h4>Suivez-nous</h4>
                     <div class="social-links">
-                        <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+                        <a href="https://www.linkedin.com/school/efrei/" target="_blank" class="social-item">
+                            <img class="logo-social" src="../img/logo-Linkedin.png" alt="LinkedIn">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://x.com/Efrei_Paris" target="_blank" class="social-item">
+                            <img class="logo-social" src="../img/Logo-X.png" alt="X">
+                            <span>X</span>
+                        </a>
+                        <a href="https://www.instagram.com/efrei_paris/" target="_blank" class="social-item">
+                            <img class="logo-social" src="../img/logo-Instagram.png" alt="Instagram">
+                            <span>Instagram</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -150,6 +202,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

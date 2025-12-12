@@ -1,0 +1,36 @@
+{
+    "section_title": "Équipe de Direction et Responsables de Pôles Stratégiques (EFREI)",
+    "date_generation": "2024-10-25T14:30:00Z",
+    "avertissement_lacunes": "Les champs 'nom_complet' (pour Niveau II) et 'photo_url' comportent des PLACEHOLDERS qui DOIVENT impérativement être mis à jour après vérification institutionnelle et acquisition des droits (voir Section III.B du rapport).",
+    "membres": "Assure le respect des engagements statutaires de l'école (membre de la CGE, habilité CTI)."
+},
+{
+    "id": "R_INNOV_LAB",
+    "nom_complet": "Rémi (Nom de famille à vérifier)",
+    "titre_officiel": "Responsable de l'Innovation Lab",
+    "structure_rattachement": "Pôle Innovation et Recherche",
+    "niveau_hierarchique": 2,
+    "ordre_affichage": 100,
+    "photo_url": "PLACEHOLDER_URL_A_ACQUERIR_CONTACT_PRESSE_REMI",
+    "biographie_courte": "En charge du développement des initiatives technologiques et des projets innovants, en lien avec les enseignants-chercheurs du laboratoire."
+},
+{
+    "id": "D_ADMISSIONS",
+    "nom_complet": "Dara",
+    "titre_officiel": "Responsable du Pôle admissions",
+    "structure_rattachement": "Pôle Admissions et Promotion",
+    "niveau_hierarchique": 2,
+    "ordre_affichage": 110,
+    "photo_url": "PLACEHOLDER_URL_A_ACQUERIR_CONTACT_PRESSE_DARA",
+    "biographie_courte": "Pilote la stratégie de recrutement des étudiants, travaillant en relation permanente avec le Responsable admissions et promotion."
+},
+{
+    "id": "K_PARTENARIAT",
+    "nom_complet": "KSéNIA ",
+    "titre_officiel": "Responsable du Pôle Partenariats Entreprise",
+    "structure_rattachement": "Pôle Partenariats Entreprise et Relations Professionnelles",
+    "niveau_hierarchique": 2,
+    "ordre_affichage": 120,
+    "photo_url": "PLACEHOLDER_URL_A_ACQUERIR_CONTACT_PRESSE_KSENIA",
+    "biographie_courte": "Assure la gestion des relations avec les 2000 entreprises partenaires.[1]"
+}

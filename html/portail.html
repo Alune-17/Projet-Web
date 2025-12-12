@@ -10,6 +10,13 @@
 </head>
 
 <body>
+    <div id="loading-screen">
+        <img class="loader-logo" src="../img/Efrei-logo.svg" alt="Logo EFREI">
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <a href="index.html">
@@ -23,7 +30,6 @@
                         <ul class="sous-menu">
                             <li><a href="./formation.html#pge">Programme Grande École</a></li>
                             <li><a href="./formation.html#bachelor">Bachelor</a></li>
-                            <li><a href="./formation.html#international">International</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -38,16 +44,14 @@
                     <li><a href="./ressource.html">Ressources</a></li>
                     <li><a href="./portail.html" class="active">Portail</a></li>
                     <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./apropos.html" class="btn btn-secondary"
-                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">À propos</a></li>
+                    <li><a href="./apropos.html" class="btn btn-secondary btn-nav-small">À propos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero-small section-padding"
-            style="background: linear-gradient(to right, #6610f2, #520dc2); padding-top: 120px;">
+        <section class="hero-small hero-page section-padding">
             <div class="container">
                 <h1>Portail Numérique</h1>
                 <p>Votre point d'entrée vers les services EFREI</p>
@@ -56,62 +60,51 @@
 
         <section class="section-padding">
             <div class="container">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div class="grid-auto">
                     <!-- Candidats -->
-                    <div class="card"
-                        style="background: var(--surface-color); padding: 2rem; border-radius: 12px; text-align: center;">
-                        <h3 class="mb-1" style="color: var(--accent-color);">Candidats</h3>
+                    <div class="card-portal">
+                        <h3>Candidats</h3>
                         <p class="mb-2">Préparez votre avenir dès maintenant.</p>
-                        <ul style="text-align: left; margin-bottom: 1.5rem; list-style: none;">
-                            <li class="mb-1">👉 <a href="#" style="text-decoration: underline;">Parcoursup</a></li>
-                            <li class="mb-1">👉 <a href="#" style="text-decoration: underline;">Concours Puissance
-                                    Alpha</a></li>
-                            <li>👉 <a href="#" style="text-decoration: underline;">Calculateur frais de scolarité</a>
-                            </li>
+                        <ul>
+                            <li class="mb-1">👉 <a href="#" class="portal-link">Parcoursup</a></li>
+                            <li class="mb-1">👉 <a href="#" class="portal-link">Concours Puissance Alpha</a></li>
+                            <li>👉 <a href="#" class="portal-link">Calculateur frais de scolarité</a></li>
                         </ul>
                         <a href="./contact.html" class="btn btn-primary">Je candidate</a>
                     </div>
 
                     <!-- Étudiants -->
-                    <div class="card"
-                        style="background: var(--surface-color); padding: 2rem; border-radius: 12px; text-align: center;">
-                        <h3 class="mb-1" style="color: var(--accent-color);">Étudiants</h3>
+                    <div class="card-portal">
+                        <h3>Étudiants</h3>
                         <p class="mb-2">Accédez à vos outils quotidiens.</p>
-                        <ul style="text-align: left; margin-bottom: 1.5rem; list-style: none;">
-                            <li class="mb-1">🔐 <a href="#" style="text-decoration: underline;">MyEfrei (Intranet)</a>
-                            </li>
-                            <li class="mb-1">📚 <a href="#" style="text-decoration: underline;">Moodle</a></li>
-                            <li>📅 <a href="#" style="text-decoration: underline;">Planning des cours</a></li>
+                        <ul>
+                            <li class="mb-1">🔐 <a href="#" class="portal-link">MyEfrei (Intranet)</a></li>
+                            <li class="mb-1">📚 <a href="#" class="portal-link">Moodle</a></li>
+                            <li>📅 <a href="#" class="portal-link">Planning des cours</a></li>
                         </ul>
                         <a href="#" class="btn btn-secondary">Connexion</a>
                     </div>
 
                     <!-- Entreprises -->
-                    <div class="card"
-                        style="background: var(--surface-color); padding: 2rem; border-radius: 12px; text-align: center;">
-                        <h3 class="mb-1" style="color: var(--accent-color);">Entreprises</h3>
+                    <div class="card-portal">
+                        <h3>Entreprises</h3>
                         <p class="mb-2">Recrutez nos talents.</p>
-                        <ul style="text-align: left; margin-bottom: 1.5rem; list-style: none;">
-                            <li class="mb-1">💼 <a href="#" style="text-decoration: underline;">Déposer une offre</a>
-                            </li>
-                            <li class="mb-1">🤝 <a href="#" style="text-decoration: underline;">Devenir partenaire</a>
-                            </li>
-                            <li>💰 <a href="#" style="text-decoration: underline;">Taxe d'apprentissage</a></li>
+                        <ul>
+                            <li class="mb-1">💼 <a href="#" class="portal-link">Déposer une offre</a></li>
+                            <li class="mb-1">🤝 <a href="#" class="portal-link">Devenir partenaire</a></li>
+                            <li>💰 <a href="#" class="portal-link">Taxe d'apprentissage</a></li>
                         </ul>
                         <a href="./contact.html" class="btn btn-secondary">Espace Pro</a>
                     </div>
 
                     <!-- Alumni -->
-                    <div class="card"
-                        style="background: var(--surface-color); padding: 2rem; border-radius: 12px; text-align: center;">
-                        <h3 class="mb-1" style="color: var(--accent-color);">Alumni</h3>
+                    <div class="card-portal">
+                        <h3>Alumni</h3>
                         <p class="mb-2">Restez connectés au réseau.</p>
-                        <ul style="text-align: left; margin-bottom: 1.5rem; list-style: none;">
-                            <li class="mb-1">📖 <a href="#" style="text-decoration: underline;">Annuaire des
-                                    diplômés</a></li>
-                            <li class="mb-1">🔄 <a href="#" style="text-decoration: underline;">Mettre à jour mon
-                                    profil</a></li>
-                            <li>🥂 <a href="#" style="text-decoration: underline;">Événements Alumni</a></li>
+                        <ul>
+                            <li class="mb-1">📖 <a href="#" class="portal-link">Annuaire des diplômés</a></li>
+                            <li class="mb-1">🔄 <a href="#" class="portal-link">Mettre à jour mon profil</a></li>
+                            <li>🥂 <a href="#" class="portal-link">Événements Alumni</a></li>
                         </ul>
                         <a href="#" class="btn btn-secondary">Accès Membre</a>
                     </div>
@@ -126,18 +119,23 @@
                 <div class="footer-column">
                     <h4>EFREI</h4>
                     <p>30-32 Avenue de la République<br>94800 Villejuif</p>
+                    <p>Métro Ligne 7 : Villejuif Louis Aragon</p>
                 </div>
-                <div class="footer-column">
-                    <h4>Accès rapide</h4>
-                    <ul>
-                        <li><a href="./formation.html">Formations</a></li>
-                        <li><a href="./contact.html">Admissions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
+                <div class="footer-column2">
                     <h4>Suivez-nous</h4>
                     <div class="social-links">
-                        <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+                        <a href="https://www.linkedin.com/school/efrei/" target="_blank" class="social-item">
+                            <img class="logo-social" src="../img/logo-Linkedin.png" alt="LinkedIn">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://x.com/Efrei_Paris" target="_blank" class="social-item">
+                            <img class="logo-social" src="../img/Logo-X.png" alt="X">
+                            <span>X</span>
+                        </a>
+                        <a href="https://www.instagram.com/efrei_paris/" target="_blank" class="social-item">
+                            <img class="logo-social" src="../img/logo-Instagram.png" alt="Instagram">
+                            <span>Instagram</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -146,6 +144,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

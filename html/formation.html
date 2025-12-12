@@ -10,6 +10,13 @@
 </head>
 
 <body>
+    <div id="loading-screen">
+        <img class="loader-logo" src="../img/Efrei-logo.svg" alt="Logo EFREI">
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <a href="index.html">
@@ -21,9 +28,8 @@
                     <li class="dropdown">
                         <a href="./formation.html" class="active">Formations</a>
                         <ul class="sous-menu">
-                            <li><a href="#pge">Programme Grande École</a></li>
-                            <li><a href="#bachelor">Bachelor</a></li>
-                            <li><a href="#international">International</a></li>
+                            <li><a href="./formation.html#pge">Programme Grande École</a></li>
+                            <li><a href="./formation.html#bachelor">Bachelor</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -38,90 +44,136 @@
                     <li><a href="./ressource.html">Ressources</a></li>
                     <li><a href="./portail.html">Portail</a></li>
                     <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./apropos.html" class="btn btn-secondary"
-                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">À propos</a></li>
+                    <li><a href="./apropos.html" class="btn btn-secondary btn-nav-small">À propos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero-small section-padding"
-            style="background: linear-gradient(to right, #003366, #0056b3); padding-top: 120px;">
+        <section class="hero-small hero-page section-padding">
             <div class="container">
                 <h1>Nos Formations</h1>
                 <p>Devenez l'expert du numérique de demain</p>
             </div>
         </section>
 
-        <section id="pge" class="section-padding">
-            <div class="container">
-                <h2 class="mb-2">Programme Grande École (PGE)</h2>
-                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem;">
-                    <div>
-                        <h3 class="mb-1">Cycle Préparatoire</h3>
-                        <ul class="mb-2" style="list-style: none;">
-                            <li
-                                style="background: var(--surface-color); padding: 1rem; margin-bottom: 0.5rem; border-radius: 8px;">
-                                Prépa Intégrée Scientifique</li>
-                            <li
-                                style="background: var(--surface-color); padding: 1rem; margin-bottom: 0.5rem; border-radius: 8px;">
-                                Prépa Biologie & Numérique</li>
-                            <li
-                                style="background: var(--surface-color); padding: 1rem; margin-bottom: 0.5rem; border-radius: 8px;">
-                                Section Internationale (100% Anglais)</li>
-                            <li
-                                style="background: var(--surface-color); padding: 1rem; margin-bottom: 0.5rem; border-radius: 8px;">
-                                Prépa Renforcée</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="mb-1">Cycle Ingénieur - Majeures</h3>
-                        <div
-                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                            <div class="card"
-                                style="background: var(--surface-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                                <h4 style="color: var(--accent-color);">Information Technology</h4>
-                                <p>Software Engineering, IT for Finance, IS Strategy</p>
+        <div class="container" style="margin-top: 4rem; margin-bottom: 2rem;">
+            <h2 class="mb-2">Programme Grande École (PGE)</h2>
+        </div>
+
+        <div class="pge-timeline-container">
+            <div class="timeline-header">
+                <div class="timeline-step step-prepa">
+                    <span class="year-badge">Années 1 & 2</span>
+                    <h3>Cycle Préparatoire</h3>
+                    <p>Acquérir les fondamentaux</p>
+                </div>
+                <div class="timeline-arrow">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
+                </div>
+                <div class="timeline-step step-inge">
+                    <span class="year-badge">Années 3, 4 & 5</span>
+                    <h3>Cycle Ingénieur</h3>
+                    <p>Se professionnaliser et choisir son expertise</p>
+                </div>
+            </div>
+
+            <div class="timeline-content">
+                <div class="content-column">
+                    <h4 class="column-title">4 Parcours de Prépa</h4>
+                    <div class="cards-list">
+                        <div class="pge-card">
+                            <div class="icon-circle">🔬</div>
+                            <div class="card-info">
+                                <strong>Prépa Scientifique</strong>
+                                <span>La voie classique</span>
                             </div>
-                            <div class="card"
-                                style="background: var(--surface-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                                <h4 style="color: var(--accent-color);">Sécurité & Réseaux</h4>
-                                <p>Cybersécurité (Gouvernance ou Infra), Network</p>
+                        </div>
+                        <div class="pge-card">
+                            <div class="icon-circle">🧬</div>
+                            <div class="card-info">
+                                <strong>Biologie & Numérique</strong>
+                                <span>Double compétence</span>
                             </div>
-                            <div class="card"
-                                style="background: var(--surface-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                                <h4 style="color: var(--accent-color);">Data Science</h4>
-                                <p>Data Engineering & IA, Business Intelligence, Bio-Info</p>
+                        </div>
+                        <div class="pge-card">
+                            <div class="icon-circle">🌍</div>
+                            <div class="card-info">
+                                <strong>Section Internationale</strong>
+                                <span>100% Anglais</span>
                             </div>
-                            <div class="card"
-                                style="background: var(--surface-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                                <h4 style="color: var(--accent-color);">Systèmes Embarqués</h4>
-                                <p>Robotique, Avionique, Transports Intelligents</p>
+                        </div>
+                        <div class="pge-card">
+                            <div class="icon-circle">📚</div>
+                            <div class="card-info">
+                                <strong>Prépa Renforcée</strong>
+                                <span>Accompagnement</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="bachelor" class="section-padding" style="background-color: var(--surface-color);">
+                <div class="content-separator"></div>
+
+                <div class="content-column wide-column">
+                    <h4 class="column-title">12 Majeures de Spécialisation (M1/M2)</h4>
+                    <div class="majors-grid-pro">
+                        <div class="major-item">
+                            <h5>Information Technology</h5>
+                            <ul>
+                                <li>Software Engineering</li>
+                                <li>IT for Finance</li>
+                                <li>IS Strategy</li>
+                            </ul>
+                        </div>
+                        <div class="major-item">
+                            <h5>Sécurité & Réseaux</h5>
+                            <ul>
+                                <li>Cybersécurité (Gouvernance)</li>
+                                <li>Cybersécurité (Infra)</li>
+                                <li>Network & Cloud</li>
+                            </ul>
+                        </div>
+                        <div class="major-item">
+                            <h5>Data Science</h5>
+                            <ul>
+                                <li>Data Engineering</li>
+                                <li>Artificial Intelligence</li>
+                                <li>Business Intelligence</li>
+                            </ul>
+                        </div>
+                        <div class="major-item">
+                            <h5>Systèmes Embarqués</h5>
+                            <ul>
+                                <li>Robotique</li>
+                                <li>Avionique & Espace</li>
+                                <li>Transports Intelligents</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="bachelor" class="section-padding" style="margin-top: 4rem;">
             <div class="container">
                 <h2 class="mb-2">Bachelors & Mastères</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div class="card"
-                        style="padding: 2rem; border: 1px solid var(--border-color); border-radius: 12px;">
+                <div class="grid-bachelors">
+                    <div class="card-formation">
                         <h3>Bachelors</h3>
-                        <ul style="list-style: disc; padding-left: 1.5rem; margin-top: 1rem;">
+                        <ul class="list-disc">
                             <li>Bachelor Informatique</li>
                             <li>Bachelor Cybersécurité</li>
                             <li>Bachelor Tech & Business</li>
                         </ul>
                     </div>
-                    <div class="card"
-                        style="padding: 2rem; border: 1px solid var(--border-color); border-radius: 12px;">
+                    <div class="card-formation">
                         <h3>Mastères Spécialisés</h3>
-                        <ul style="list-style: disc; padding-left: 1.5rem; margin-top: 1rem;">
+                        <ul class="list-disc">
                             <li>UX Design</li>
                             <li>Data & IA</li>
                             <li>Management des SI</li>
@@ -131,46 +183,76 @@
             </div>
         </section>
 
-        <section class="section-padding">
+        <section class="section-padding bg-surface">
             <div class="container text-center">
                 <h2 class="mb-2">Stack Technique Enseignée</h2>
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-                    <!-- Using text for now, but these would be logos -->
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">Java (Spring)</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">Python (Django)</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">C++</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">Node.js</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">React</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">Vue.js</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">Docker</span>
-                    <span style="padding: 0.5rem 1rem; background: #333; border-radius: 4px;">AWS</span>
+                <div class="tech-stack-container">
+                    <div class="tech-badge-with-logo">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                        <span>Java (Spring)</span>
+                    </div>
+                    <div class="tech-badge-with-logo">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            alt="Python">
+                        <span>Python (Django)</span>
+                    </div>
+                    <div class="tech-badge-with-logo">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                            alt="C++">
+                        <span>C++</span>
+                    </div>
+                    <div class="tech-badge-with-logo">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-badge-with-logo">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React">
+                        <span>React</span>
+                    </div>
+                    <div class="tech-badge-with-logo">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                            alt="Vue.js">
+                        <span>Vue.js</span>
+                    </div>
+                    <div class="tech-badge-with-logo">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                            alt="Docker">
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-badge-with-logo">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+                            alt="AWS">
+                        <span>AWS</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="international" class="section-padding" style="background-color: var(--surface-color);">
+        <section id="international" class="section-padding">
             <div class="container">
                 <h2 class="mb-2">International</h2>
                 <p class="mb-2">106 partenaires dans 46 pays. Plus de 40 doubles diplômes.</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div class="grid-international">
                     <div>
-                        <h4 style="color: var(--primary-color);">Amérique du Nord</h4>
-                        <ul>
+                        <h4 class="text-primary">Amérique du Nord</h4>
+                        <ul class="list-simple">
                             <li>UC Irvine</li>
                             <li>McGill</li>
                             <li>Concordia</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 style="color: var(--primary-color);">Europe</h4>
-                        <ul>
+                        <h4 class="text-primary">Europe</h4>
+                        <ul class="list-simple">
                             <li>Partenaires Erasmus+</li>
                             <li>Staffordshire UK</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 style="color: var(--primary-color);">Asie</h4>
-                        <ul>
+                        <h4 class="text-primary">Asie</h4>
+                        <ul class="list-simple">
                             <li>KAIST (Corée)</li>
                             <li>Beihang University (Chine)</li>
                         </ul>
@@ -186,18 +268,23 @@
                 <div class="footer-column">
                     <h4>EFREI</h4>
                     <p>30-32 Avenue de la République<br>94800 Villejuif</p>
+                    <p>Métro Ligne 7 : Villejuif Louis Aragon</p>
                 </div>
-                <div class="footer-column">
-                    <h4>Accès rapide</h4>
-                    <ul>
-                        <li><a href="./formation.html">Formations</a></li>
-                        <li><a href="./contact.html">Admissions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
+                <div class="footer-column2">
                     <h4>Suivez-nous</h4>
                     <div class="social-links">
-                        <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+                        <a href="https://www.linkedin.com/school/efrei/" target="_blank" class="social-item">
+                            <img class="logo-social" src="../img/logo-Linkedin.png" alt="LinkedIn">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://x.com/Efrei_Paris" target="_blank" class="social-item">
+                            <img class="logo-social" src="../img/Logo-X.png" alt="X">
+                            <span>X</span>
+                        </a>
+                        <a href="https://www.instagram.com/efrei_paris/" target="_blank" class="social-item">
+                            <img class="logo-social" src="../img/logo-Instagram.png" alt="Instagram">
+                            <span>Instagram</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -206,6 +293,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

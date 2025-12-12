@@ -1,0 +1,38 @@
+[
+    {
+        "nom": "Stefani EL KALAMOUNI",
+        "role": "Enseignante (Data scientiste)",
+        "email": "stefani.el-kalamouni@efrei.fr",
+        "photo_url": "https://web.archive.org/web/20250905132704im_/https://www.efrei.fr/wp-content/uploads/2025/02/EL-KALAMOUNI-Stefani.jpg"
+    },
+    {
+        "nom": "Nicolas FLASQUE",
+        "role": "Enseignant ingénieur pédagogique (Docteur en informatique)",
+        "email": "nicolas.flasque@efrei.fr",
+        "photo_url": "https://web.archive.org/web/20250905132704im_/https://www.efrei.fr/wp-content/uploads/2024/05/Flasque-Nicolas.jpg"
+    },
+    {
+        "nom": "Asma GABIS",
+        "role": "Responsable du département informatique",
+        "email": "asma.gabis@efrei.fr",
+        "photo_url": "https://web.archive.org/web/20250905132704im_/https://www.efrei.fr/wp-content/uploads/2024/05/GABIS-Asma.jpg"
+    },
+    {
+        "nom": "Mohamad GHASSANY",
+        "role": "Enseignant chercheur et Responsable de la filière Data & IA",
+        "email": "mohamad.ghassany@efrei.fr",
+        "photo_url": "https://web.archive.org/web/20250905132704im_/https://www.efrei.fr/wp-content/uploads/2022/02/GHASSANY-Mohamad_2.jpg"
+    },
+    {
+        "nom": "Johannes GOMOLKA",
+        "role": "Enseignant chercheur et Responsable de la majeure IT for Finance",
+        "email": "johannes.gomolka@efrei.fr",
+        "photo_url": "https://web.archive.org/web/20250905132704im_/https://www.efrei.fr/wp-content/uploads/2019/03/gomolka-johannes.jpg"
+    },
+    {
+        "nom": "Yvan GUIFO FODJO",
+        "role": "Enseignant chercheur (Génie logiciel / Informatique)",
+        "email": "yvan.guifo-fodjo@efrei.fr",
+        "photo_url": "https://web.archive.org/web/20250905132704im_/https://www.efrei.fr/wp-content/uploads/2024/05/GUIFO-Yvan.jpg"
+    }
+]
